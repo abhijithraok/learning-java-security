@@ -1,49 +1,21 @@
 package com.abhijith.hashing;
 
-import javax.swing.plaf.TableHeaderUI;
-import java.io.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.*;
+
+import static com.abhijith.hashing.GenerateHash.generateHash;
 
 
 public class PasswordHashing {
-    private static final String SALT = "abhijith";
-    private Map<String, String> map = new HashMap<String, String>();
 
-    public static void main(String args[]) {
+    public boolean authenticate() {  //calls captcha which prompts random 4 digit to enter
+        
+        HashMap<String, String> map = new HashMap<String, String>();
+        boolean bool = false;
         PasswordHashing passwordHashing = new PasswordHashing();
+        Captcha cap = new Captcha();
 
-        passwordHashing.authenticate();
-
-
-    }
-
-    private static String generateHash(String input) {
-        StringBuilder hash = new StringBuilder();
-
-        try {
-            MessageDigest sha = MessageDigest.getInstance("SHA-1");
-            byte[] hashedBytes = sha.digest(input.getBytes());
-            char[] digits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                    'a', 'b', 'c', 'd', 'e', 'f'};
-            for (byte temp : hashedBytes) {
-                byte b = temp;
-                hash.append(digits[(b & 0xf0) >> 4]);
-                hash.append(digits[b & 0x0f]);
-            }
-        } catch (NoSuchAlgorithmException e) {
-
-        }
-
-        return hash.toString();
-    }
-
-    private void authenticate() {
-        PasswordHashing passwordHashing = new PasswordHashing();
-
-        passwordHashing.signup("abhijith", "password");
-        String captch = captch();
+        map = passwordHashing.signup("abhijith", "password");
+        String captch = cap.captch();
         System.out.println("please enter captcha");
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
@@ -51,54 +23,38 @@ public class PasswordHashing {
             System.out.println("enter correct captcha ");
             input = scanner.nextLine();
         }
-        if (passwordHashing.login("abhijith", "password"))
+        if ((passwordHashing.login("abhijith", "password", map))) {
             System.out.println("user login successfull.");
+            return true;
 
+        }
         // login should fail because of wrong password.
-        if (passwordHashing.login("abhijth", "adfaddf"))
+        if (passwordHashing.login("abhijth", "adfaddf", map)) {
             System.out.println("User login successfull.");
-        else
+            return true;
+
+        } else {
             System.out.println("user login failed.");
+            return false;
 
+        }
 
     }
 
-    private String captch() {
-
-        StringBuilder randomChars = new StringBuilder();
-        StringBuilder sb = new StringBuilder();
-
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream inputStream = classLoader.getResourceAsStream("random.txt");
-
-        Scanner scanner = new Scanner(inputStream);
-
-        while (scanner.hasNext()) {
-            randomChars.append(scanner.nextLine());
-        }
-        scanner.close();
-
-
-        Random rnd = new Random();
-        while (sb.length() < 5) {
-            int index = (int) (rnd.nextFloat() * randomChars.length());
-            sb.append(randomChars.charAt(index));
-
-        }
-        String randomDigit = sb.toString();
-        System.out.println(randomDigit);
-        return randomDigit;
-    }
-
-
-    private void signup(String username, String password) {
+    public HashMap<String, String> signup(String username, String password) {    //stores username and hashed password
+        ReadingSaltFromText readingSaltFromText = new ReadingSaltFromText();
+        HashMap<String, String> map = new HashMap<String, String>();
+        String SALT = readingSaltFromText.readFile();
         String saltedPassword = SALT + password;
-        String hashedPassword = generateHash(saltedPassword);
+        String hashedPassword = generateHash(saltedPassword);                      //generates hash for password
+        System.out.println(hashedPassword);
         map.put(username, hashedPassword);
-
+        return map;
     }
 
-    private Boolean login(String username, String password) {
+    public Boolean login(String username, String password, HashMap<String, String> map) {   //checks user name and password against stored hashed password
+        ReadingSaltFromText readingSaltFromText = new ReadingSaltFromText();
+        String SALT = readingSaltFromText.readFile();
         boolean isAuthenticated;
         String saltedPassword = SALT + password;
         String hashedPassword = generateHash(saltedPassword);
@@ -111,5 +67,6 @@ public class PasswordHashing {
         }
         return isAuthenticated;
     }
+
 
 }
