@@ -1,5 +1,6 @@
 package com.abhijith.hashing;
 
+import javax.swing.plaf.TableHeaderUI;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -26,7 +27,7 @@ public class PasswordHashing {
             byte[] hashedBytes = sha.digest(input.getBytes());
             char[] digits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                     'a', 'b', 'c', 'd', 'e', 'f'};
-            for(byte temp: hashedBytes){
+            for (byte temp : hashedBytes) {
                 byte b = temp;
                 hash.append(digits[(b & 0xf0) >> 4]);
                 hash.append(digits[b & 0x0f]);
@@ -40,6 +41,7 @@ public class PasswordHashing {
 
     private void authenticate() {
         PasswordHashing passwordHashing = new PasswordHashing();
+
         passwordHashing.signup("abhijith", "password");
         String captch = captch();
         System.out.println("please enter captcha");
@@ -62,8 +64,21 @@ public class PasswordHashing {
     }
 
     private String captch() {
-        String randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
+        StringBuilder randomChars = new StringBuilder();
         StringBuilder sb = new StringBuilder();
+
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream("random.txt");
+
+        Scanner scanner = new Scanner(inputStream);
+
+        while (scanner.hasNext()) {
+            randomChars.append(scanner.nextLine());
+        }
+        scanner.close();
+
+
         Random rnd = new Random();
         while (sb.length() < 5) {
             int index = (int) (rnd.nextFloat() * randomChars.length());
@@ -76,14 +91,6 @@ public class PasswordHashing {
     }
 
 
-  // private  String captch(){
-       //    File file = new File("randomString.txt");
-
-
-
-
-   //    return "a";
- //  }
     private void signup(String username, String password) {
         String saltedPassword = SALT + password;
         String hashedPassword = generateHash(saltedPassword);
@@ -92,7 +99,7 @@ public class PasswordHashing {
     }
 
     private Boolean login(String username, String password) {
-        boolean isAuthenticated ;
+        boolean isAuthenticated;
         String saltedPassword = SALT + password;
         String hashedPassword = generateHash(saltedPassword);
 
