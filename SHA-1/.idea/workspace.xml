@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0eddf7f6-3c7c-4fba-a5aa-95ad1d161b6e" name="Default Changelist" comment="first commit">
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,38 +49,42 @@
     <session id="-2078223096">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="12" />
-          <entry key="java" value="2582" />
+          <entry key="dummy" value="133" />
+          <entry key="java" value="3832" />
           <entry key="txt" value="100" />
+          <entry key="xml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2582" />
-          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="JAVA" value="3832" />
+          <entry key="PLAIN_TEXT" value="233" />
+          <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="14" />
           <entry key="txt" value="3" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="14" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="2" />
         </counts>
@@ -92,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -101,40 +105,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+            <state>
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/MD5Hashing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateSalt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/BcryptHashing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-544">
-              <caret line="10" column="8" selection-end-line="71" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#355#371#0" expanded="true" />
-                <element signature="e#1615#1631#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/salt.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/ReadingSaltFromText.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,22 +148,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateHash.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/SecureHashAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="91" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Captcha.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="340">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,10 +162,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/abhijith/hashing/PasswordHashingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="7" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <element signature="e#304#320#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -202,16 +195,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/JdbcDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/com/abhijith/hashing/model/JdbcDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/com/abhijith/hashing/model/UserInfo.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/com/abhijith/hashing/dao/JdbcDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/random.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Test.java" />
         <option value="$PROJECT_DIR$/src/main/resources/salt.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/ReadingSaltFromText.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Captcha.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/abhijith/hashing/PasswordHashingTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateHash.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/MD5Hashing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateSal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateSalt.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/abhijith/hashing/PasswordHashingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/SHA1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/SecureHashAlgorithm.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/abhijith/hashing/BcryptHashing.java" />
       </list>
     </option>
   </component>
@@ -229,9 +228,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-37" />
-    <option name="y" value="-11" />
-    <option name="width" value="1936" />
+    <option name="x" value="1675" />
+    <option name="y" value="-8" />
+    <option name="width" value="2001" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -240,8 +239,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,17 +294,25 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SHA-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SHA-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hashing" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533206235820" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533377935523" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -339,7 +346,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PasswordHashing">
+  <component name="RunManager" selected="Application.BcryptHashing">
+    <configuration name="BcryptHashing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.BcryptHashing" />
+      <module name="hash" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abhijith.hashing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MD5Hashing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.MD5Hashing" />
+      <module name="hash" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abhijith.hashing.GenerateSalt" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PasswordHashing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.PasswordHashing" />
       <module name="hash" />
@@ -353,7 +386,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordHashingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SecureHashAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.SecureHashAlgorithm" />
       <module name="hash" />
       <extension name="coverage">
         <pattern>
@@ -361,24 +395,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.abhijith.hashing" />
-      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.PasswordHashingTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordHashingTest.authenticate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hash" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.abhijith.hashing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.abhijith.hashing" />
-      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.PasswordHashingTest" />
-      <option name="METHOD_NAME" value="authenticate" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -387,7 +403,7 @@
       <module name="hash" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.abhijith.hashing.*" />
+          <option name="PATTERN" value="com.abhijith.hashing.GenerateSalt" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -399,36 +415,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordHashingTest.signup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hash" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.abhijith.hashing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.abhijith.hashing" />
-      <option name="MAIN_CLASS_NAME" value="com.abhijith.hashing.PasswordHashingTest" />
-      <option name="METHOD_NAME" value="signup" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.PasswordHashing" />
-      <item itemvalue="JUnit.PasswordHashingTest.authenticate" />
-      <item itemvalue="JUnit.PasswordHashingTest" />
       <item itemvalue="JUnit.PasswordHashingTest.login" />
-      <item itemvalue="JUnit.PasswordHashingTest.signup" />
+      <item itemvalue="Application.MD5Hashing" />
+      <item itemvalue="Application.SecureHashAlgorithm" />
+      <item itemvalue="Application.BcryptHashing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BcryptHashing" />
+        <item itemvalue="Application.SecureHashAlgorithm" />
+        <item itemvalue="Application.MD5Hashing" />
         <item itemvalue="Application.PasswordHashing" />
         <item itemvalue="JUnit.PasswordHashingTest.login" />
-        <item itemvalue="JUnit.PasswordHashingTest.authenticate" />
-        <item itemvalue="JUnit.PasswordHashingTest.signup" />
-        <item itemvalue="JUnit.PasswordHashingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -447,7 +447,11 @@
       <workItem from="1533131093232" duration="129000" />
       <workItem from="1533131247790" duration="164000" />
       <workItem from="1533131924300" duration="63000" />
-      <workItem from="1533184202292" duration="15245000" />
+      <workItem from="1533184202292" duration="16148000" />
+      <workItem from="1533269807299" duration="1244000" />
+      <workItem from="1533310803955" duration="1199000" />
+      <workItem from="1533360813124" duration="86000" />
+      <workItem from="1533372511821" duration="5228000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1533129929055</created>
@@ -492,13 +496,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21138000" />
+    <option name="totallyTimeSpent" value="29798000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1493936" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15565032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -506,8 +510,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49228224" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49228224" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,7 +520,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5077177" side_tool="true" weight="0.32917964" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.491731" weight="0.32917964" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.491731" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -571,27 +575,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/com/abhijith/hashing/dao/JdbcDaoImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/com/abhijith/hashing/model/UserInfo.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Test.java" />
     <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -602,40 +586,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/abhijith/hashing/PasswordHashingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="7" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#304#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/Captcha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-end-line="33" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateHash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="91" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/ReadingSaltFromText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="204">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -644,12 +598,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/PasswordHashing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="10" column="8" selection-end-line="71" selection-end-column="1" />
+        <state relative-caret-position="-34">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#355#371#0" expanded="true" />
-            <element signature="e#1615#1631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/abhijith/hashing/PasswordHashingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/SecureHashAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/MD5Hashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/GenerateSalt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/abhijith/hashing/BcryptHashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
