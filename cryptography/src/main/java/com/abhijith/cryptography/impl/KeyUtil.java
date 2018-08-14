@@ -52,9 +52,6 @@ public class KeyUtil {
         return symmetrickKey;
     }
 
-    public static void main(String [] args ){
-        System.out.println(generateSymmetricKey("AESWithCTSAndPKCS5Padding",20,false));
-    }
 
 }
 

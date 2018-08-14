@@ -2,7 +2,8 @@ package com.abhijith.cryptography.impl;
 
 public enum Algorithm {
     //encryption algorithm
-    AES("AES/ECB/PKCS1Padding"), DES("DES/ECB/PKCS1Padding"), RSA("RSA/ECB/PKCS1Padding"),
+    AES("AES"), DES("DES"), RSA("RSA"),
+    AES_CIPHER("AES/ECB/PKCS5Padding"),DES_CIPHER("DES/ECB/PKCS5Padding"),RSA_CIPHER("RSA/ECB/PKCS5Padding"),
 
     // message digest algorithm
     MD2("MD2"),
