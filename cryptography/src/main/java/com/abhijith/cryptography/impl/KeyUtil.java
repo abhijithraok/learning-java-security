@@ -7,17 +7,25 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import java.security.*;
 
+
 public class KeyUtil {
-    public static Key generateSymmetricKey(String algorithm, int keySize, boolean bouncyProvider) {
+    /**
+     *
+     * @param algorithm used in key generation
+     * @param keySize : lenght of key
+     * @param bouncyProvider
+     * @return
+     */
+    public static Key generateSymmetricKey(Algorithm algorithm, int keySize, boolean bouncyProvider) {
         KeyGenerator keyGenerator = null;
         try {
             Provider provider = null;
             if (bouncyProvider) {
                 provider = new BouncyCastleProvider();
                 Security.addProvider(provider);
-                keyGenerator = KeyGenerator.getInstance(algorithm, provider);
+                keyGenerator = KeyGenerator.getInstance(algorithm.toString(), provider);
             } else {
-                keyGenerator = keyGenerator.getInstance(algorithm);
+                keyGenerator = keyGenerator.getInstance(algorithm.toString());
             }
 
         } catch (NoSuchAlgorithmException e) {
@@ -29,8 +37,14 @@ public class KeyUtil {
         return symmetrickKey;
     }
 
-
-    public static KeyPair generateAsymmetricKey(String algorithm, int keySize, boolean bouncyProvider) {
+    /**
+     *
+     * @param algorithm
+     * @param keySize
+     * @param bouncyProvider
+     * @return
+     */
+    public static KeyPair generateAsymmetricKey(Algorithm algorithm, int keySize, boolean bouncyProvider) {
 
         KeyPairGenerator keyPairGenerator = null;
         try {
@@ -38,16 +52,16 @@ public class KeyUtil {
             if (bouncyProvider) {
                 provider = new BouncyCastleProvider();
                 Security.addProvider(provider);
-                keyPairGenerator = KeyPairGenerator.getInstance(algorithm, provider);
+                keyPairGenerator = KeyPairGenerator.getInstance(algorithm.toString(), provider);
             } else {
-                keyPairGenerator = KeyPairGenerator.getInstance(algorithm);
+                keyPairGenerator = KeyPairGenerator.getInstance(algorithm.toString());
             }
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
 
         }
-        keyPairGenerator.initialize(keySize,new SecureRandom());
+        keyPairGenerator.initialize(keySize, new SecureRandom());
         KeyPair symmetrickKey = keyPairGenerator.generateKeyPair();
         return symmetrickKey;
     }

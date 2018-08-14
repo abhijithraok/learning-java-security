@@ -24,6 +24,11 @@ public class PropertyUtil {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
