@@ -8,7 +8,7 @@ import java.security.*;
 public class BcryptHashing {
     public static String getBcrypt(String input) throws NoSuchAlgorithmException {
         String generatedSecuredPassword = BCrypt.hashpw(input, BCrypt.gensalt(12));
-        System.out.println(generatedSecuredPassword);
+        //System.out.println(generatedSecuredPassword);
         return generatedSecuredPassword;
     }
 }
