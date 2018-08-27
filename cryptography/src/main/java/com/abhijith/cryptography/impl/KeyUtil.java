@@ -5,14 +5,17 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import java.security.*;
+
+import static com.abhijith.cryptography.util.CryptographyConstant.DEFAULT_KEY_SIZE;
 
 
 public class KeyUtil {
     /**
-     *
-     * @param algorithm used in key generation
-     * @param keySize : lenght of key
+     * @param algorithm      used in key generation
+     * @param keySize        : lenght of key
      * @param bouncyProvider
      * @return
      */
@@ -32,13 +35,22 @@ public class KeyUtil {
             e.printStackTrace();
 
         }
+        switch (algorithm) {
+            case DES:
+                keySize = 56;
+                break;
+
+            case AES:
+                keySize =256;
+                break;
+        }
+
         keyGenerator.init(keySize, new SecureRandom());
         Key symmetrickKey = keyGenerator.generateKey();
         return symmetrickKey;
     }
 
     /**
-     *
      * @param algorithm
      * @param keySize
      * @param bouncyProvider

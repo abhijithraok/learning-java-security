@@ -1,6 +1,8 @@
 package com.abhijith.cryptography.impl;
 
+import static com.abhijith.cryptography.encode.ByteToHex.byte2Hex;
 import static com.abhijith.cryptography.util.CryptographyConstant.*;
+import static com.abhijith.cryptography.encode.HexToByte.hex2byte;
 
 import java.io.UnsupportedEncodingException;
 import java.security.*;
@@ -19,66 +21,38 @@ import javax.crypto.spec.SecretKeySpec;
  * @date 8/13/2018
  * @description common encrypt and decrypt
  */
-public class EncryptWrapperImpl implements CryptoWrapperInterface {
-    private static Logger logger = Logger.getLogger(EncryptWrapperImpl.class.getName());
+public class EncryptSymmetrickWrapperImpl implements CryptoWrapperInterface {
+    private static Logger logger = Logger.getLogger(EncryptSymmetrickWrapperImpl.class.getName());
+    private static Key symmetrickKey = null;
+    private static KeyPair asymmetrickKey = null;
 
-    /**
-     *
-     * @param bytes
-     * @return string value of byte array
-     */
-    private static String byte2Hex(byte[] bytes) {
-        StringBuilder sb = new StringBuilder();
-        for (byte b : bytes) {
-            String hex = Integer.toHexString(b & 0xFF);
-            if (hex.length() == 1) {
-                hex = "0" + hex;   // one byte to double-digit hex
-            }
-            sb.append(hex);
-        }
-        return sb.toString();
-    }
 
-    /**
-     *
-     * @param hex
-     * @return byte array
-     */
-    private static byte[] hex2byte(String hex) {
-        if (hex == null || hex.length() < 1) {
-            return null;
-        }
-        int len = hex.length() / 2;
-        byte[] bytes = new byte[len];
-        for (int i = 0; i < len; i++) {
-            int high = Integer.parseInt(hex.substring(i * 2, i * 2 + 1), 16);
-            int low = Integer.parseInt(hex.substring(i * 2 + 1, i * 2 + 2), 16);
-            bytes[i] = (byte) (high * 16 + low);
-        }
-        return bytes;
-    }
+
 
     /**
      * encrypt content
+     *
      * @param content
      * @param password
-     * @param iv initialization vector
-     * @param algorithm AES,DES for Secret key
+     * @param iv              initialization vector
+     * @param algorithm       AES,DES for Secret key
      * @param cipherAlgorithm used in cipher mode
      * @return encrypted content
      */
     @Override
     public String encrypt(final String content, final String password, final byte[] iv, final Algorithm algorithm, final Algorithm cipherAlgorithm) {
-
+        KeyUtil keyUtil = new KeyUtil();
         try {
 
-            final SecretKeySpec keySpec = generateKey(password, algorithm);
+
+            symmetrickKey = keyUtil.generateSymmetricKey(algorithm, DEFAULT_KEY_SIZE, false);
+
             Cipher cipher = Cipher.getInstance(cipherAlgorithm.toString());
             if (iv == null) {
-                cipher.init(Cipher.ENCRYPT_MODE, keySpec);
+                cipher.init(Cipher.ENCRYPT_MODE, symmetrickKey);
             } else {
                 IvParameterSpec ivSpec = new IvParameterSpec(iv);
-                cipher.init(Cipher.ENCRYPT_MODE, keySpec, ivSpec);
+                cipher.init(Cipher.ENCRYPT_MODE, symmetrickKey, ivSpec);
             }
             logger.info("Default cipher algorithm initialized!!");
             byte[] result = cipher.doFinal(content.getBytes(CHARSET));
@@ -90,11 +64,10 @@ public class EncryptWrapperImpl implements CryptoWrapperInterface {
     }
 
     /**
-     *
      * @param encryptedContent
      * @param password
-     * @param iv initialization vector
-     * @param algorithm : AES,DES
+     * @param iv               initialization vector
+     * @param algorithm        : AES,DES
      * @param cipherAlgorithm
      * @return decypted content
      */
@@ -104,13 +77,13 @@ public class EncryptWrapperImpl implements CryptoWrapperInterface {
 
         try {
 
-            final SecretKeySpec keySpec = generateKey(password, algorithm);
+            //  final SecretKeySpec keySpec = generateKey(password, algorithm);
             Cipher cipher = Cipher.getInstance(cipherAlgorithm.toString());
             if (iv == null) {
-                cipher.init(Cipher.DECRYPT_MODE, keySpec);
+                cipher.init(Cipher.DECRYPT_MODE, symmetrickKey);
             } else {
                 IvParameterSpec ivSpec = new IvParameterSpec(iv);
-                cipher.init(Cipher.DECRYPT_MODE, keySpec, ivSpec);
+                cipher.init(Cipher.DECRYPT_MODE, symmetrickKey, ivSpec);
             }
             byte[] result = cipher.doFinal(hex2byte(encryptedContent));
             logger.info("decrypted!");
@@ -121,40 +94,10 @@ public class EncryptWrapperImpl implements CryptoWrapperInterface {
         return null;
     }
 
-    /**
-     *
-     * @param password
-     * @param algorithm
-     * @return
-     */
-    private SecretKeySpec generateKey(final String password, final Algorithm algorithm) {
-        try {
-            final KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm.toString());
-            SecureRandom secureRandom;
-            secureRandom = SecureRandom.getInstance("SHA1PRNG");
-            secureRandom.setSeed(password.getBytes());
-            int keySize = DEFAULT_KEY_SIZE;
-            switch (algorithm) {
-                case DES:
-                    keySize = 56;
-                    break;
-            }
-            keyGenerator.init(keySize, secureRandom);
-            SecretKey secretKey = keyGenerator.generateKey();
-            byte[] encodedFormat = secretKey.getEncoded();
-            logger.info("generate secret key spec!");
-            return new SecretKeySpec(encodedFormat, algorithm.toString());
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } //catch (NoSuchProviderException e) {
-        //   e.printStackTrace();
-        //  }
-        return null;
-    }
+
 
     /**
-     *
-     * @param content get hash value using this
+     * @param content   get hash value using this
      * @param algorithm of hash
      * @return hash value
      */
@@ -172,6 +115,7 @@ public class EncryptWrapperImpl implements CryptoWrapperInterface {
         }
         return null;
     }
+
 
 }
 
